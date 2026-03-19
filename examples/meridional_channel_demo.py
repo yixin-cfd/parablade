@@ -100,8 +100,8 @@ ax.set_xlabel('x - axis', fontsize=fontsize, color='k', labelpad=12)
 ax.set_ylabel('y - axis', fontsize=fontsize, color='k', labelpad=12)
 ax.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
 ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
-for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+ax.tick_params(axis='x', labelsize=fontsize)   # 设置 x 轴
+ax.tick_params(axis='y', labelsize=fontsize)   # 设置 y 轴
 
 # Plot the boundary of the domain
 u = np.linspace(0.00, 1.00, 1000)

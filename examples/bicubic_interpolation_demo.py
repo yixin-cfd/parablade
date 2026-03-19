@@ -58,7 +58,7 @@ time_start = time.time()
 interpolant = RectBivariateSpline(x, y, F, kx=3, ky=3, s=0)
 Fq = interpolant(xq, yq)
 [Xq, Yq] = np.meshgrid(xq, yq, indexing='ij')
-error = np.real(np.asscalar(np.sum((Fq - my_func(Xq, Yq))**2)**(1/2)/(nx*ny)))
+error = np.real((np.sum((Fq - my_func(Xq, Yq))**2)**(1/2)/(nx*ny)).item())
 print('SciPy interpolation: Error %(my_error).6e / Elapsed time %(my_time).6f seconds' % {'my_error': error, 'my_time': time.time() - time_start})
 
 
@@ -73,7 +73,7 @@ f_interpolator = BicubicInterpolation(x, y, F)
 fq = np.real(f_interpolator(xq,yq))
 
 # Evaluate the interpolation error and running time
-error = np.real(np.asscalar(np.sum((fq - my_func(xq, yq))**2)**(1/2)/(nx*ny)))
+error = np.real((np.sum((fq - my_func(xq, yq))**2)**(1/2)/(nx*ny)).item())
 print('ParaBlade interpolation: Error %(my_error).6e / Elapsed time %(my_time).6f seconds' % {'my_error': error, 'my_time': time.time() - time_start})
 
 
@@ -98,9 +98,9 @@ fontsize = 11
 ax.set_xlabel('$x$ axis', fontsize=fontsize, color='k', labelpad=12)
 ax.set_ylabel('$y$ axis', fontsize=fontsize, color='k', labelpad=12)
 ax.set_zlabel('$z$ axis', fontsize=fontsize, color='k', labelpad=12)
-for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-for t in ax.zaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+ax.xaxis.set_tick_params(labelsize=fontsize)
+ax.yaxis.set_tick_params(labelsize=fontsize)
+ax.zaxis.set_tick_params(labelsize=fontsize)
 ax.xaxis.set_rotate_label(False)
 ax.yaxis.set_rotate_label(False)
 ax.zaxis.set_rotate_label(False)

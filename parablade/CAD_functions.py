@@ -489,9 +489,9 @@ class BSplineCurve:
             # ax.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
             # ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
             # ax.zaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
-            for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-            for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-            for t in ax.zaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+            ax.tick_params(axis='x', labelsize=fontsize)   # 设置 x 轴
+            ax.tick_params(axis='y', labelsize=fontsize)   # 设置 y 轴
+            ax.tick_params(axis='z', labelsize=fontsize)   # 设置 z 轴
             ax.xaxis.set_rotate_label(False)
             ax.yaxis.set_rotate_label(False)
             ax.zaxis.set_rotate_label(False)
@@ -839,9 +839,9 @@ class BSplineSurface:
         # ax.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
         # ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
         # ax.zaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
-        for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-        for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-        for t in ax.zaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+        ax.tick_params(axis='x', labelsize=fontsize)   # 设置 x 轴
+        ax.tick_params(axis='y', labelsize=fontsize)   # 设置 y 轴
+        ax.tick_params(axis='z', labelsize=fontsize)   # 设置 z 轴
         ax.xaxis.set_rotate_label(False)
         ax.yaxis.set_rotate_label(False)
         ax.zaxis.set_rotate_label(False)
@@ -1184,8 +1184,8 @@ class NurbsCurve:
             ax.set_ylabel('$y$ axis', fontsize=fontsize, color='k', labelpad=12)
             # ax.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
             # ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
-            for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-            for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+            ax.tick_params(axis='x', labelsize=fontsize)   # 设置 x 轴
+            ax.tick_params(axis='y', labelsize=fontsize)   # 设置 y 轴
             # ax.set_xticks([])
             # ax.set_yticks([])
             # ax.axis('off')
@@ -1621,9 +1621,9 @@ class NurbsSurface:
         ax.set_xlabel('$x$ axis', fontsize=fontsize, color='k', labelpad=8)
         ax.set_ylabel('$y$ axis', fontsize=fontsize, color='k', labelpad=8)
         ax.set_zlabel('$z$ axis', fontsize=fontsize, color='k', labelpad=8)
-        for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-        for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-        for t in ax.zaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+        ax.tick_params(axis='x', labelsize=fontsize)   # 设置 x 轴
+        ax.tick_params(axis='y', labelsize=fontsize)   # 设置 y 轴
+        ax.tick_params(axis='z', labelsize=fontsize)   # 设置 z 轴
         ax.xaxis.set_rotate_label(False)
         ax.yaxis.set_rotate_label(False)
         ax.zaxis.set_rotate_label(False)

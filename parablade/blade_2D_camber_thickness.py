@@ -681,8 +681,8 @@ class Blade2DCamberThickness:
         ax.set_ylabel('$y$ axis', fontsize=fontsize, color='k', labelpad=12)
         # ax.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
         # ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
-        for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-        for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+        ax.tick_params(axis='x', labelsize=fontsize)   # 设置 x 轴刻度标签字体
+        ax.tick_params(axis='y', labelsize=fontsize)   # 设置 y 轴刻度标签字体
         # ax.set_xticks([])
         # ax.set_yticks([])
         ax.axis('off')
@@ -853,8 +853,8 @@ class Blade2DCamberThickness:
         ax.set_ylabel('$y$ axis', fontsize=fontsize, color='k', labelpad=12)
         # ax.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
         # ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
-        for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-        for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+        ax.tick_params(axis='x', labelsize=fontsize)   # 设置 x 轴
+        ax.tick_params(axis='y', labelsize=fontsize)   # 设置 y 轴
         # ax.set_xticks([])
         # ax.set_yticks([])
         ax.axis('off')
@@ -907,8 +907,8 @@ class Blade2DCamberThickness:
         ax.set_ylabel('$\kappa$ - Curvature', fontsize=fontsize, color='k', labelpad=12)
         # ax.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
         # ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.1f'))
-        for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-        for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+        ax.tick_params(axis='x', labelsize=fontsize)   # 设置 x 轴
+        ax.tick_params(axis='y', labelsize=fontsize)   # 设置 y 轴
         # ax.set_xticks([])
         # ax.set_yticks([])
         # ax.axis('off')
@@ -975,8 +975,8 @@ class Blade2DCamberThickness:
         ax.set_ylabel('$u$ parameter', fontsize=fontsize, color='k', labelpad=12)
         # ax.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.2f'))
         # ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.2f'))
-        for t in ax.xaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
-        for t in ax.yaxis.get_major_ticks(): t.label.set_fontsize(fontsize)
+        ax.xaxis.set_tick_params(labelsize=fontsize)
+        ax.yaxis.set_tick_params(labelsize=fontsize)
         # ax.set_xticks([])
         # ax.set_yticks([])
         # ax.axis('off')
