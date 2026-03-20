@@ -240,8 +240,8 @@ class BladePlot:
         self.ax_2D.set_ylabel('$y$ axis', fontsize=12, color='k', labelpad=12)
         # self.ax_2D.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.2f'))
         # self.ax_2D.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.2f'))
-        for t in self.ax_2D.xaxis.get_major_ticks(): t.label.set_fontsize(12)
-        for t in self.ax_2D.yaxis.get_major_ticks(): t.label.set_fontsize(12)
+        self.ax_2D.tick_params(axis='x', labelsize=12)   # 设置 x 轴
+        self.ax_2D.tick_params(axis='y', labelsize=12)   
 
         # Plot prescribed coordinates
         self.points_2D, = self.ax_2D.plot(x, y)

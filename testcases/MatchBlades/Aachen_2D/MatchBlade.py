@@ -68,7 +68,7 @@ except:
 # Matching of a prescribed blade geometry
 #---------------------------------------------------------------------------------------------#
 # Set plotting options
-options = {'view_xy'            : 'no',    # 2D Recommended
+options = {'view_xy'            : 'yes',    # 2D Recommended
            'view_xR'            : 'no',     # 3D Recommended
            'view_yz'            : 'no',     # 3D Optional
            'view_3D'            : 'no',     # 3D Recommended

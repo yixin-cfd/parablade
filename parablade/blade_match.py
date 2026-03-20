@@ -652,8 +652,8 @@ class BladeMatch:
             self.axes_1.set_ylabel('$y$ - axis', fontsize=12, color='k', labelpad=12)
             # self.axes_1.xaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.2f'))
             # self.axes_1.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.2f'))
-            for t in self.axes_1.xaxis.get_major_ticks(): t.label.set_fontsize(12)
-            for t in self.axes_1.yaxis.get_major_ticks(): t.label.set_fontsize(12)
+            self.axes_1.tick_params(axis='x', labelsize=12)
+            self.axes_1.tick_params(axis='y', labelsize=12)
             plt.tight_layout(pad=1.0, w_pad=None, h_pad=None)
 
             # Set the axes for the plot
