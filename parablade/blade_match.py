@@ -521,7 +521,9 @@ class BladeMatch:
     # ---------------------------------------------------------------------------------------------------------------- #
     # Save the current blade matching
     # ---------------------------------------------------------------------------------------------------------------- #
-    def print_coordinates(self, filename='matched_coordinates', path=os.getcwd()):
+    def print_coordinates(self, filename='matched_coordinates', path=None):
+        if path is None:
+            path = os.getcwd()
 
         """ Print the coordinates of the prescribed and matched blades in a .csv file """
 
